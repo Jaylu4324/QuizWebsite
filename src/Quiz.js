@@ -21,14 +21,14 @@ function Quiz(props) {
         e.preventDefault();
         let score=0;
         questions.forEach((ele,index)=>{
-            console.log(ele.correct,ans[ele.id])
+            // console.log(ele.correct,ans[ele.id])
             if(ele.correct==ans[ele.id]){
                 score++;
             }
         })
         setAns1(score)
-        console.log(ans1)
-        // localStorage.setItem("result",score);
+        // console.log(ans1)
+        localStorage.setItem("result",score);
         // setAns1(score)
         // console.log(score)
 
@@ -45,7 +45,7 @@ function Quiz(props) {
         doc.save(`${name}.pdf`)
 
     }
-    console.log(ans1)
+    // console.log(ans1)
     return (
         <>
             <form className={`container-fluid   text-${props.font}`} style={{ backgroundColor: props.pageBg }}>
